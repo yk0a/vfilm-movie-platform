@@ -1,0 +1,85 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url('../img/Mbg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+    color: aliceblue; 
+}
+
+h2 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.form-label {
+    color: aliceblue;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 60%; 
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(10px);
+    color: azure;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    border-color: aqua;
+    color: white;
+}
+
+.btn-primary, .btn-secondary {
+    width: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 123, 255, 0.7);
+    border-color: aqua;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(108, 117, 125, 0.7);
+}
+
+.row {
+    margin-top: 30px;
+}
+
+
+.btn-group label {
+    border-radius: 12px !important;
+    transition: transform 0.4s ease;
+}
+
+.btn-group label:hover {
+    transform: scale(1.1);
+}
+
+#user-pp {
+    transition: transform 0.4s ease;
+}
+
+#user-pp:hover {
+    transform: scale(1.05);
+    border: solid 1px #fff;
+    box-shadow: 3px 3px 5px 9px;
+    cursor: pointer;
+}

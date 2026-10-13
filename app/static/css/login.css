@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.alan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.wrapper {
+    width: 500px;
+    background-color: rgb(10, 0, 0, .35);
+    border: 2px solid azure;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: azure;
+    border-radius: 12px;
+    padding: 30px 20px;
+    
+} 
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px rgba(240, 255, 255, 0.4);
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    background: rgba(255, 255, 255, .0999999);
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 40px;
+    font-size: 15px;
+    color: azure;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.725);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+.wrapper .parolaunut {
+    display: flex;
+    justify-content: space-evenly;
+    font-size:  14.5px;
+    margin: -15px 0 15px;
+}
+
+.parolaunut a {
+    color: rgba(255, 255, 255, 0.775);
+    text-decoration: none;
+}
+
+.parolaunut a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-shadow: azure;
+}
+
+.wrapper .btn {
+    
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    color: azure;
+    border-color: azure;
+    outline-color: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: .3s;
+}
+
+.wrapper .btn:hover{
+    box-shadow: 0 0 5px azure;
+}
+
+.wrapper .kaydol-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0px 15px;
+}
+
+.kaydol-link p {
+    color: rgba(255, 255, 255, 0.7);
+}
+.kaydol-link a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.kaydol-link a:hover {
+    color: azure;
+    text-decoration: underline;
+}
