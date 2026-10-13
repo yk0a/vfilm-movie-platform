@@ -1,0 +1,41 @@
+{% extends 'base.htm' %}
+{% block content %}
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Giriş Yap | VFilm</title>
+</head>
+<body>
+    <div class="alan text-center">
+        <div class="wrapper">
+            <form method="post" action="/login">
+               <h1>Giriş Yapın</h1> 
+                <div class="input-box">
+                    <i class='bx bx-user'></i>
+                    <input name="inp_mail" type="text" placeholder="E-mail" required>
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt' ></i>
+                    <input name="inp_password" type="password" placeholder="Parola" required>
+                </div>
+                <div class="parolaunut">
+                    <a href="#">Parolamı hatırlamıyorum!</a>
+                </div>
+                {% if error %}
+                <div class="alert alert-danger">
+                    {{ error }}
+                </div>
+               {% endif %}
+                   <button type="submit" class="btn">Giriş Yap</button> 
+                   <div class="kaydol-link">
+                   <p>Henüz bir hesabın yok mu? <a href="/register"> Kaydol </a></p> 
+                   </div>
+                   
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/"><img src="../static/img/VF_logo.png" class="img-fluid" style="max-height: 40px; overflow-y: visible; transform: scale(2.5);" alt="error4o4"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Anasayfa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/contacts">Contacts</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/movielistGenre/action/1">Aksiyon</a></li>
+                      <li><a class="dropdown-item" href="/movielistGenre/scifi/1">Bilim Kurgu</a></li>
+                      <li><a class="dropdown-item" href="/movielistGenre/drama/1">Dram</a></li>
+                      <li><a class="dropdown-item" href="/movielistGenre/comedy/1">Komedi</a></li>
+                      <li><a class="dropdown-item" href="/movielistGenre/horror-thriller/1">Korku/Gerilim</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/movielist/most-viewed/1">En çok görüntülenen</a></li>
+                      <li><a class="dropdown-item" href="/movielist/IMDb-rated/1">IMDB puanına göre</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    {% if logged %}
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{session["user_ad"]}}
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/profile">Profil</a></li>
+                          <li><a class="dropdown-item" href="/account-settings">Hesap Ayarları</a></li>
+                          <li><a class="dropdown-item" href="/mywatchlist">Listem</a></li>
+                          <hr>
+                          <li class="text-center"><a href="/logout"><button style="width: 120px;" class="btn btn-outline-danger text-center">Çıkış Yap</button></a></li>
+                      </ul>
+                    {% else %}
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Oturum Aç
+                      </a>
+                      <ul style="padding: 0 6px;" class="dropdown-menu text-center">
+                          <li><a class="btn btn-outline-light" style="width: 100%; margin: 5px 0px;" href="/login">Giriş Yap</a></li>
+                          <li><a class="btn btn-outline-secondary" style="width: 100%; margin: 5px 0px;" href="/register">Kayıt Ol</a></li>
+                      </ul>
+                    {% endif %}
+                </li>
+                
+                </ul>
+                <form class="d-flex" role="search" action="/search/1?inp_search=action" method="get">
+                  <input class="form-control me-2" name="inp_search" type="search" placeholder="Ara" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Ara</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="page-main">
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center" style="background-color: black; bottom: 0;">
+      <hr> <p>&copy; 2024 Tüm Hakları Saklıdır | VFILM</p><hr>
+      Made by <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 600; text-decoration: none;" href="https://www.instagram.com/yerlikayaardaa" target="_blank">Arda YERLIKAYA</a>
+    </footer>
+    
+  </body>
+</html>

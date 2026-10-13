@@ -1,0 +1,49 @@
+{% extends 'base.htm' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kaydol | VFilm </title>
+    <link rel="stylesheet" href="../static/css/register.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="alan text-center">
+        <div class="wrapper-reg text-center">
+            <form class="text-center" method="post" action="/register">
+                <h1>Kayıt Olun</h1>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input id="inputAd" type="text" name="inp_name" placeholder="Ad" required>
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="inp_surname" placeholder="Soyad" required>
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" name="inp_mail" placeholder="E-Mail" required>
+                        <i class='bx bx-envelope' ></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="inp_password" placeholder="Parola" required>
+                        <i class='bx bx-lock-alt' ></i>
+                    </div>
+                    
+                </div>
+                <button type="submit" class="btn ">Kaydol</button>
+                <div class="giriş-link">
+                    <p>Zaten bir hesabın var mı?<a href="/login"> Giriş Yap! </a></p> 
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.htm' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | {{ Udata.name_sname}}</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<body>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-white">
+                <div class="card-header text-center">
+                    <hr><h2 style="cursor: pointer;">Profil Bilgileri</h2>
+                </div>
+                <div class="card-body text-center" style="justify-content: center !important;">
+                    
+                    <img src="{{Udata.user_pp}}" alt="pp-error"><hr>
+                    
+                    <div style="justify-content: center;" class="col-md-4 stats-section text-center">
+                        <div class="stats-box">
+                            <strong>Ad ve Soyad:</strong> {{ Udata.name_sname }}
+                        </div>
+                            
+                        <div class="stats-box">
+                            <strong>E-posta:</strong> {{ Udata.email }}
+                        </div>
+                        
+                        <div class="stats-box">
+                            <strong>İzleme Listesindeki Film Sayısı:</strong>   {{ wlc }}
+                        </div>
+                        
+                        <div class="stats-box">
+                            <strong>Kayıt Tarihi:</strong>   {{ Udata.date }}
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="/account-settings" class="btn btn-outline-light">Hesap Ayarlarını Düzenle</a>
+                        <a href="/logout" class="btn btn-danger">Çıkış Yap</a><hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
+
+{% endblock %}
