@@ -253,7 +253,7 @@ def accdetails():
         try:
             if password:  
                 cursor.execute("""
-                    UPDATE User SET name_sname=?, email=?, password=? pp=? WHERE id=?
+                    UPDATE User SET name_sname=?, email=?, password=?, pp=? WHERE id=?
                 """, (name, email, password, selected_pp, user_id))
             else:  
                 cursor.execute("""
